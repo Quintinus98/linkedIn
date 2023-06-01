@@ -2,17 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #F3F2EF;
+  color: black;
 }
 
-#root {
-  max-width: 1280px;
+body {
+  background-color: #F3F2EF;
+  max-width: 1800px; /*Change later*/
+  margin: 0 auto;
 }
 
 .container {
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #E0DFDC;
   border-radius: 6px;
-  padding: 2rem;
+  padding: 1.2rem;
   max-width: 700px;
+  margin-bottom: 0.5rem;
 }

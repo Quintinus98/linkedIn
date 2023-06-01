@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import "./style.css";
 
 interface WorkExperienceProps {
   title: string;
@@ -8,13 +9,33 @@ interface WorkExperienceProps {
   startDate: Date;
   endDate?: Date;
   description: string;
-  skills: string;
+  skills: string[];
+}
+
+interface skillProps {
+  skills: string[];
 }
 
 const getColor = () => {
-  const arr: string[] = ["red", "yellow", "purple"];
+  const arr: string[] = ["crimson", "blue", "purple", "green", "gray"];
   return arr[Math.floor(Math.random() * arr.length)];
 };
+
+
+// Add the dot instead of * at a later time.
+const UserSkills = ({skills}: skillProps) => {
+  
+  const mySkills = skills.map((skill, index) => {
+    if (index < skills.length - 1) {
+      return <span key={index}>{skill} * </span>
+    } else {
+      return <span key={index}>{skill} </span>
+    }
+  })
+
+  return <span>{mySkills}</span>
+}
+
 
 const WorkExperience = ({
   title,
@@ -31,21 +52,34 @@ const WorkExperience = ({
   if (endDate === undefined) {
     endDate = new Date();
   }
-  const period: Date = new Date(endDate.valueOf() - startDate.valueOf());
-  // const period = new Date();
+  // const period: Date = new Date(endDate.getTime() - startDate.getTime());
 
   return (
     <>
-      <div className="flex_container">
+      <div className="flex_container container">
         <div className="logo" style={{ backgroundColor: color }}></div>
         <div className="exp_content">
-          {title}
-          {employmentType}
-          {companyName}
-          {location}
-          {period.toDateString()}
-          {description}
-          {skills}
+          <h3>{title}</h3>
+          <div className="companyName">
+            <span>{companyName}</span> * <span>{employmentType}</span>
+          </div>
+          <div className="date">
+            <span>{startDate.toLocaleString('en-US', {month: 'short'})} {startDate.getFullYear()} </span>
+            -
+            {/* Modify endDate to display present if not specified */}
+            <span> {endDate.toLocaleString('en-US', {month: 'short'})} {endDate.getFullYear()}</span>
+            {/* <span style={{marginRight:"10px"}}>{period.toLocaleDateString()}</span> */}
+          </div>
+          <div className="location">
+            {location}
+          </div>
+          <div className="description">
+            {description}
+          </div>
+          <div >
+            <span className="skills">Skills: </span>
+            <UserSkills skills={skills}/>
+          </div>
         </div>
       </div>
     </>

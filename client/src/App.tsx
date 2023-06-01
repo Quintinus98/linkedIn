@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
 import WorkExperience from "./components/workExperience";
 
@@ -9,9 +9,10 @@ function App() {
   return (
     <>
       <div className="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo porro labore maiores
-        nobis in inventore error unde quaerat aliquam adipisci assumenda laudantium earum culpa
-        soluta, accusamus, cumque hic? A.
+        This is all test, to be deleted when pages are designed.
+      </div>
+      <div className="container">
+        The container adds a container for your elements.
       </div>
 
       <WorkExperience
@@ -19,10 +20,10 @@ function App() {
         employmentType="Internship"
         companyName="Outreachy"
         location="Remote"
-        startDate={new Date("Dec 2022")}
-        endDate={new Date("Mar 2023")}
+        startDate={new Date(2022, 11, 5)}
+        endDate={new Date(2023, 2, 3)}
         description={description}
-        skills="patternfly, Redux"
+        skills={["patternfly", "Redux"]}
       />
     </>
   );
