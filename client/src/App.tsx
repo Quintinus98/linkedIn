@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
 import WorkExperience from "./components/workExperience";
+import Seperator from "./components/seperator";
 
 function App() {
   const description: string =
@@ -8,23 +9,31 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        This is all test, to be deleted when pages are designed.
-      </div>
-      <div className="container">
-        The container adds a container for your elements.
-      </div>
+      <div className="container">This is all test, to be deleted when pages are designed.</div>
 
-      <WorkExperience
-        title="Intern"
-        employmentType="Internship"
-        companyName="Outreachy"
-        location="Remote"
-        startDate={new Date(2022, 11, 5)}
-        endDate={new Date(2023, 2, 3)}
-        description={description}
-        skills={["patternfly", "Redux"]}
-      />
+      <div className="container">
+        <WorkExperience
+          title="Intern"
+          employmentType="Internship"
+          companyName="Outreachy"
+          location="Remote"
+          startDate={new Date(2022, 11, 5)}
+          endDate={new Date(2023, 2, 3)}
+          description={description}
+          skills={["patternfly", "Redux"]}
+        />
+        <Seperator />
+        <WorkExperience
+          title="Intern"
+          employmentType="Internship"
+          companyName="Outreachy"
+          location="Remote"
+          startDate={new Date(2022, 11, 5)}
+          endDate={new Date(2023, 2, 3)}
+          description={description}
+          skills={["patternfly", "Redux"]}
+        />
+      </div>
     </>
   );
 }
