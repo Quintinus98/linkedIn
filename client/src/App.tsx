@@ -2,6 +2,7 @@
 import "./App.css";
 import WorkExperience from "./components/workExperience";
 import Seperator from "./components/seperator";
+import NavBar from "./components/navbar";
 
 function App() {
   const description: string =
@@ -33,6 +34,10 @@ function App() {
           description={description}
           skills={["patternfly", "Redux"]}
         />
+      </div>
+
+      <div className="container">
+        <NavBar />
       </div>
     </>
   );
