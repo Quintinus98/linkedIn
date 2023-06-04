@@ -1,0 +1,75 @@
+.header {
+  top: 0;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E0DFDC;
+}
+
+.navbar {
+  margin: 0 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 12px;
+}
+
+.navbar .first {
+  display: flex;
+  flex-direction: row;
+  gap: .2rem;
+  align-items: center;
+}
+
+.navbar .first input {
+  border: none;
+  box-shadow: none;
+  color: rgb(28, 29, 30);
+  background-color: rgb(238, 243, 249);
+  font-size: 16px;
+  line-height: 1.5;
+  height: 34px;
+  border-radius: 4px;
+}
+
+.navbar .first input.nosubmit {
+  padding: 0 .8rem 0 40px;
+  background: rgb(238, 243, 249) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
+}
+
+.navbar .second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1.8rem;
+}
+
+.navbar .second svg,
+.navbar .third svg {
+  fill: rgb(102, 102, 102);
+}
+
+.navbar .second svg:hover,
+.navbar .third svg:hover {
+  fill: #000000;
+}
+
+.navbar .second div:hover,
+.navbar .third div:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.navbar .third {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar .second div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
