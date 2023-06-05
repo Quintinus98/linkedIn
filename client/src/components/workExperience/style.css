@@ -4,7 +4,7 @@
 }
 
 .flex_container .logo {
-  width: 53px;
+  min-width: 53px;
   height: 54px;
   border-radius: 2px;
   margin-right: 5px;
