@@ -7,11 +7,11 @@
 }
 
 .navbar {
-  margin: 0 10rem;
+  margin: 0 12rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px 0;
+  padding: 0;
   font-size: 12px;
 }
 
@@ -38,38 +38,78 @@
   background: rgb(238, 243, 249) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
 }
 
-.navbar .second {
+ul.second {
+  list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 1.8rem;
 }
 
-.navbar .second svg,
-.navbar .third svg {
+ul.second li button {
+  background-color: inherit;
+  color: #666666;
+  box-sizing: border-box;
+  border: none;
+}
+
+ul.second li button span {
+  color: rgb(102, 102, 102);
+}
+
+ul.second li button svg {
   fill: rgb(102, 102, 102);
 }
 
-.navbar .second svg:hover,
-.navbar .third svg:hover {
+ul.second li button:hover svg {
   fill: #000000;
 }
 
-.navbar .second div:hover,
-.navbar .third div:hover {
+ul.second li button:hover span {
   color: #000000;
-  cursor: pointer;
 }
 
-.navbar .third {
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.navbar .second div {
+ul.second div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+}
+
+li .profile img {
+  border-radius: 50%;
+}
+
+li i {
+  color: inherit;
+  width: 16px;
+  height: 16px;
+}
+
+div.getHired {
+  max-width: 100px;
+}
+
+div.getHired a {
+  color: rgb(146, 90, 10);
+  text-decoration: underline;
+  text-align: center;
+  margin: auto;
+}
+
+.li-business {
+  border-left: 1px solid #E0DFDC;
+}
+
+.li-getHired {
+  display: flex;
+}
+
+ul.second:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+ul.second {
+margin: 0;
+padding: 0;
+list-style: none;
 }
