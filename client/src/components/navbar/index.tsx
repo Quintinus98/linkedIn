@@ -4,7 +4,7 @@ import "./styles.css";
 const NavBar = () => {
   return (
     <>
-      <div className="header">
+      <nav className="header">
         <div className="navbar">
           <div className="first">
             <svg
@@ -163,7 +163,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

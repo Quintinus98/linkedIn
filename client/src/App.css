@@ -1,16 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  color: black;
-}
-
-body {
-  background-color: #F3F2EF;
-  max-width: 1800px; /*Change later*/
-  margin: 0 auto;
-}
-
 .app {
   margin: 0 10rem;
 }

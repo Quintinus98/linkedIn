@@ -1,10 +1,9 @@
 .header {
-  top: 0;
   width: 100%;
-  position: absolute;
   background-color: #ffffff;
   border-bottom: 1px solid #E0DFDC;
   overflow: hidden;
+  z-index: 100;
 }
 
 .navbar {
@@ -12,7 +11,7 @@
   margin: 0 11rem;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: center;
   padding: 0;
   font-size: 12px;
 }
@@ -58,6 +57,9 @@ ul.second li button {
   color: #666666;
   box-sizing: border-box;
   border: none;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 ul.second li button span {
@@ -95,6 +97,7 @@ li i {
 
 div.getHired {
   max-width: 100px;
+  width: 100px;
 }
 
 div.getHired a {
@@ -112,14 +115,8 @@ div.getHired a {
   display: flex;
 }
 
-ul.second:after {
-  content: ' ';
-  display: table;
-  clear: both;
-}
-
-ul.second {
-margin: 0;
-padding: 0;
-list-style: none;
+@media screen and (max-width: 500px) {
+  div.getHired {
+    width: 70px;
+  }
 }
