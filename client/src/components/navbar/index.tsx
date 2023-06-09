@@ -20,18 +20,13 @@ const NavBar = () => {
             </svg>
 
             <div className="nosubmit">
-            <input
-              type="search"
-              name="Search"
-              id="search"
-              placeholder="Search"
-            />
+              <input type="search" name="Search" id="search" placeholder="Search" />
             </div>
           </div>
 
           <ul className="second">
             <li>
-              <button>
+              <a href="#" className="nav_link" target="_self">
                 <div className="home">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,11 +41,11 @@ const NavBar = () => {
                   </svg>
                   <span>Home</span>
                 </div>
-              </button>
+              </a>
             </li>
 
             <li>
-              <button>
+              <a href="#" className="nav_link" target="_self">
                 <div className="my-network">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +60,11 @@ const NavBar = () => {
                   </svg>
                   <span>My Network</span>
                 </div>
-              </button>
+              </a>
             </li>
 
             <li>
-              <button>
+              <a href="#" className="nav_link" target="_self">
                 <div className="jobs">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -84,10 +79,10 @@ const NavBar = () => {
                   </svg>
                   <span>Jobs</span>
                 </div>
-              </button>
+              </a>
             </li>
             <li>
-              <button>
+              <a href="#" className="nav_link" target="_self">
                 <div className="messaging">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,17 +97,17 @@ const NavBar = () => {
                   </svg>
                   <span>Messaging</span>
                 </div>
-              </button>
+              </a>
             </li>
             <li>
-              <button>
+              <a href="#" target="_self" className="nav_link">
                 <div className="notifications">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     data-supported-dps="24x24"
                     fill="currentColor"
-                    className="mercado-match"
+                    className="svg_color"
                     width="24"
                     height="24"
                     focusable="false">
@@ -120,11 +115,11 @@ const NavBar = () => {
                   </svg>
                   <span>Notifications</span>
                 </div>
-              </button>
+              </a>
             </li>
 
             <li>
-              <button>
+              <button className="nav_link">
                 <div className="profile">
                   <img src={profile} alt="Profile photo" width={24} height={24} />
                   <span>
@@ -136,7 +131,7 @@ const NavBar = () => {
             </li>
 
             <li className="li-business">
-              <button className="business">
+              <button className="business nav_link">
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -149,8 +144,9 @@ const NavBar = () => {
                     focusable="false">
                     <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
                   </svg>
-                  <span>For Business
-                  <i className="fa-solid fa-caret-down"></i>
+                  <span>
+                    For Business
+                    <i className="fa-solid fa-caret-down"></i>
                   </span>
                 </div>
               </button>

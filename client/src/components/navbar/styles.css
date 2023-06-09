@@ -23,12 +23,16 @@
   align-items: center;
 }
 
+.navbar .first div.nosubmit {
+  width: 400px
+}
+
 .navbar .first input {
   border: none;
   box-shadow: none;
-  color: rgb(28, 29, 30);
+  color: black;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.75;
   height: 34px;
   border-radius: 4px;
   padding: 0 .8rem 0 40px;
@@ -38,12 +42,9 @@
   outline: none;
 }
 
-.navbar .first div.nosubmit {
-  width: 406px
-}
 .navbar .first input:focus {
-  width: 400px;
-  border: 3px solid rgb(133, 178, 248)
+  width: 384px;
+  border: 2px solid rgb(10, 102, 194);
 }
 
 ul.second {
@@ -54,28 +55,39 @@ ul.second {
 
 ul.second li button {
   background-color: inherit;
-  color: #666666;
-  box-sizing: border-box;
   border: none;
-  padding: 0.6em 1em;
-  font-size: 1em;
+  min-width: 80px;
+  min-height: 52px;
   cursor: pointer;
+  font-size: 12px;
 }
 
-ul.second li button span {
+.nav_link {
+  min-height: 52px;
+  min-width: 80px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  color: #0009;
+}
+
+.nav_link span {
   color: rgb(102, 102, 102);
   white-space: nowrap;
 }
 
-ul.second li button svg {
+.nav_link svg {
   fill: rgb(102, 102, 102);
 }
 
-ul.second li button:hover svg {
+.nav_link:hover svg {
   fill: #000000;
 }
 
-ul.second li button:hover span {
+.nav_link:hover span {
   color: #000000;
 }
 
@@ -109,6 +121,7 @@ div.getHired a {
 
 .li-business {
   border-left: 1px solid #E0DFDC;
+  padding-left: 0.8rem !important;
 }
 
 .li-getHired {
