@@ -5,7 +5,7 @@ import Seperator from "./components/seperator";
 import NavBar from "./components/navbar";
 
 function App() {
-  const description: string =
+  const description =
     "Consolidating and making reusable various react UI components from two user interfaces. Working and planning with a team to build open source projects";
 
   return (
