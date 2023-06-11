@@ -1,99 +1,25 @@
 // import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import WorkExperience from "./components/workExperience";
-import Seperator from "./components/seperator";
+import Home from "./pages/Home";
 import NavBar from "./components/navbar";
+import MyNetwork from "./pages/MyNetwork";
+import Jobs from "./pages/Jobs";
+import Messaging from "./pages/Messaging";
+import Notifications from "./pages/Notifications";
 
 function App() {
-  const description: string =
-    "Consolidating and making reusable various react UI components from two user interfaces. Working and planning with a team to build open source projects";
-
   return (
-    <div>
+    <>
       <NavBar />
-      <div className="app">
-        <div className="container">
-          This is all test, to be deleted when pages are designed. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Amet sint soluta qui repellendus vitae et quasi debitis
-          nostrum odit quas, illo placeat cumque eaque expedita fuga quos nulla iure veniam. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsam a distinctio
-          voluptatibus, necessitatibus temporibus ullam esse tenetur earum pariatur repellendus
-          consectetur, sint recusandae omnis officiis labore molestias quae perferendis!Lorem Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Maxime, architecto fugiat. Illum
-          consequatur eaque amet facilis laborum officiis similique ea perferendis dolor repellendus
-          dignissimos sunt, id sequi dolorum aperiam quisquam? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ipsa nobis voluptate officiis porro mollitia vero eum
-          accusantium a quisquam natus, laudantium neque, hic delectus officia maiores aut
-          voluptates eveniet animi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-          sint soluta qui repellendus vitae et quasi debitis nostrum odit quas, illo placeat cumque
-          eaque expedita fuga quos nulla iure veniam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptatum ipsam a distinctio voluptatibus, necessitatibus temporibus
-          ullam esse tenetur earum pariatur repellendus consectetur, sint recusandae omnis officiis
-          labore molestias quae perferendis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Maxime, architecto fugiat. Illum consequatur eaque amet facilis laborum officiis
-          similique ea perferendis dolor repellendus dignissimos sunt, id sequi dolorum aperiam
-          quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis voluptate
-          officiis porro mollitia vero eum accusantium a quisquam natus, laudantium neque, hic
-          delectus officia maiores aut voluptates eveniet animi! Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Amet sint soluta qui repellendus vitae et quasi debitis
-          nostrum odit quas, illo placeat cumque eaque expedita fuga quos nulla iure veniam. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsam a distinctio
-          voluptatibus, necessitatibus temporibus ullam esse tenetur earum pariatur repellendus
-          consectetur, sint recusandae omnis officiis labore molestias quae perferendis!Lorem Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Maxime, architecto fugiat. Illum
-          consequatur eaque amet facilis laborum officiis similique ea perferendis dolor repellendus
-          dignissimos sunt, id sequi dolorum aperiam quisquam? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ipsa nobis voluptate officiis porro mollitia vero eum
-          accusantium a quisquam natus, laudantium neque, hic delectus officia maiores aut
-          voluptates eveniet animi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-          sint soluta qui repellendus vitae et quasi debitis nostrum odit quas, illo placeat cumque
-          eaque expedita fuga quos nulla iure veniam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptatum ipsam a distinctio voluptatibus, necessitatibus temporibus
-          ullam esse tenetur earum pariatur repellendus consectetur, sint recusandae omnis officiis
-          labore molestias quae perferendis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Maxime, architecto fugiat. Illum consequatur eaque amet facilis laborum officiis
-          similique ea perferendis dolor repellendus dignissimos sunt, id sequi dolorum aperiam
-          quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis voluptate
-          officiis porro mollitia vero eum accusantium a quisquam natus, laudantium neque, hic
-          delectus officia maiores aut voluptates eveniet animi! Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Amet sint soluta qui repellendus vitae et quasi debitis
-          nostrum odit quas, illo placeat cumque eaque expedita fuga quos nulla iure veniam. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsam a distinctio
-          voluptatibus, necessitatibus temporibus ullam esse tenetur earum pariatur repellendus
-          consectetur, sint recusandae omnis officiis labore molestias quae perferendis!Lorem Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Maxime, architecto fugiat. Illum
-          consequatur eaque amet facilis laborum officiis similique ea perferendis dolor repellendus
-          dignissimos sunt, id sequi dolorum aperiam quisquam? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ipsa nobis voluptate officiis porro mollitia vero eum
-          accusantium a quisquam natus, laudantium neque, hic delectus officia maiores aut
-          voluptates eveniet animi!
-        </div>
-
-        <div className="container">
-          <WorkExperience
-            title="Intern"
-            employmentType="Internship"
-            companyName="Outreachy"
-            location="Remote"
-            startDate={new Date(2022, 11, 5)}
-            endDate={new Date(2023, 2, 3)}
-            description={description}
-            skills={["patternfly", "Redux"]}
-          />
-          <Seperator />
-          <WorkExperience
-            title="Intern"
-            employmentType="Internship"
-            companyName="Outreachy"
-            location="Remote"
-            startDate={new Date(2022, 11, 5)}
-            endDate={new Date(2023, 2, 3)}
-            description={description}
-            skills={["patternfly", "Redux"]}
-          />
-        </div>
-      </div>
-    </div>
+      <Routes>
+        <Route path="/feed" element={<Home />} />
+        <Route path="/mynetwork" element={<MyNetwork />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/messaging" element={<Messaging />} />
+        <Route path="/notifications" element={<Notifications />} />
+      </Routes>
+    </>
   );
 }
 

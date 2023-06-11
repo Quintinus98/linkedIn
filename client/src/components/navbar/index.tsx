@@ -1,4 +1,5 @@
 import { profile } from "../../assets";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const NavBar = () => {
@@ -26,7 +27,7 @@ const NavBar = () => {
 
           <ul className="second">
             <li>
-              <a href="#" className="nav_link" target="_self">
+              <Link to="/feed" className="nav_link" target="_self">
                 <div className="home">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -41,11 +42,11 @@ const NavBar = () => {
                   </svg>
                   <span>Home</span>
                 </div>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#" className="nav_link" target="_self">
+              <Link to="/mynetwork" className="nav_link" target="_self">
                 <div className="my-network">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +61,11 @@ const NavBar = () => {
                   </svg>
                   <span>My Network</span>
                 </div>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#" className="nav_link" target="_self">
+              <Link to="/jobs" className="nav_link" target="_self">
                 <div className="jobs">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,10 +80,10 @@ const NavBar = () => {
                   </svg>
                   <span>Jobs</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="nav_link" target="_self">
+              <Link to="/messaging" className="nav_link" target="_self">
                 <div className="messaging">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -97,10 +98,10 @@ const NavBar = () => {
                   </svg>
                   <span>Messaging</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" target="_self" className="nav_link">
+              <Link to="/notifications" target="_self" className="nav_link">
                 <div className="notifications">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +116,7 @@ const NavBar = () => {
                   </svg>
                   <span>Notifications</span>
                 </div>
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -154,7 +155,7 @@ const NavBar = () => {
 
             <li className="li-getHired">
               <div className="getHired">
-                <a href="#">Get Hired Faster, Try Premium free</a>
+                <a href="#" className="navlink__getHired">Get Hired Faster, Try Premium free</a>
               </div>
             </li>
           </ul>
