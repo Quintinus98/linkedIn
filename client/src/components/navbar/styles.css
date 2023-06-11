@@ -21,6 +21,7 @@
   flex-direction: row;
   gap: .2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar .first div.nosubmit {

@@ -26,7 +26,7 @@ const NavBar = () => {
       <nav className="header">
         <div className="navbar">
           <div className="first">
-            <NavLink to="/feed">
+            <NavLink to="/feed" style={{ display: "flex" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
