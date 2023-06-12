@@ -1,5 +1,6 @@
 import WorkExperience from "../components/workExperience";
 import Seperator from "../components/seperator";
+import Post from "../components/post";
 
 function Home() {
   const description: string =
@@ -13,6 +14,10 @@ function Home() {
           consectetur, adipisicing elit. Amet sint soluta qui repellendus vitae et quasi debitis
           nostrum odit quas, illo placeat cumque eaque expedita fuga quos nulla iure veniam. Lorem
           ipsum dolor sit amet consectetur
+        </div>
+
+        <div className="container">
+          <Post />
         </div>
 
         <div className="container">
