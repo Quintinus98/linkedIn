@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #E0DFDC;
+  border-bottom: 1px solid rgb(235, 235, 235);
   overflow: hidden;
   z-index: 100;
 }
@@ -21,6 +21,7 @@
   flex-direction: row;
   gap: .2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar .first div.nosubmit {
@@ -83,12 +84,29 @@ ul.second li button {
   fill: rgb(102, 102, 102);
 }
 
-.nav_link:hover svg {
+.nav_link:hover svg,
+.nav_link.active svg {
   fill: #000000;
 }
 
-.nav_link:hover span {
+.nav_link:hover span,
+.nav_link.active span{
   color: #000000;
+}
+
+.nav_link.active::after{
+  transform: scaleX(1);
+}
+
+.nav_link::after {
+  content: "";
+  transform: scaleX(0);
+  border-bottom: 2px solid black;
+  transition: transform .2s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 ul.second div {
@@ -112,7 +130,7 @@ div.getHired {
   width: 100px;
 }
 
-div.getHired a {
+div.getHired .navlink__getHired {
   color: rgb(146, 90, 10);
   text-decoration: underline;
   text-align: center;
@@ -127,6 +145,11 @@ div.getHired a {
 .li-getHired {
   display: flex;
 }
+
+ul.second li {
+  position: relative;
+}
+
 
 @media screen and (max-width: 500px) {
   div.getHired {
