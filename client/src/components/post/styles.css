@@ -1,0 +1,19 @@
+.post {
+  background-color: #ffffff;
+  border: 1px solid #E0DFDC;
+  border-radius: 6px;
+  padding: 1.2rem 0;
+  max-width: 700px;
+  margin-bottom: 0.5rem;
+}
+
+.post--pad {
+  padding: 0 1.2rem;
+}
+
+.post__header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+

@@ -1,5 +1,5 @@
 // import React from 'react'
-import { useAppSelector } from '../../app/hooks'
+import { useAppSelector } from "../../app/hooks";
 
 export type Post = {
   id: string;
@@ -8,22 +8,17 @@ export type Post = {
 };
 
 const PostsList = () => {
-  const posts = useAppSelector(state => state.posts.entities)
+  const posts = useAppSelector((state) => state.posts.entities);
 
   const renderedPosts = posts.map((post: Post) => (
-    
     // Use a post component instead.
     <article key={post.id}>
       <h3>{post.title}</h3>
       <p>{post.body}</p>
     </article>
-  )) 
+  ));
 
-  return (
-    <>
-    {renderedPosts}
-    </>
-  )
-}
+  return <>{renderedPosts}</>;
+};
 
-export default PostsList
+export default PostsList;

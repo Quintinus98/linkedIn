@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface postState {
   entities: {
-    [key: string]: any
+    [key: string]: any;
   };
   status: string;
 }
