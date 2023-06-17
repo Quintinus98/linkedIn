@@ -1,8 +1,26 @@
 // import React from "react";
-import { profile, Egbin } from "../../assets";
+import { profile } from "../../assets";
 import "./styles.css";
 
-const Post = () => {
+import { postType } from "../../features/posts/PostsList";
+
+const followers = () => {
+  const random = Math.floor(Math.random() * 10000);
+  return random;
+};
+
+const Post = (
+  post
+: postType) => {
+
+  const Img_video = () => {
+    if (post.image) {
+      return (<img src={post.image} alt="Egbin Power PLC" />)
+    } else if (post.video) {
+      return (<video src={post.video} controls></video>)
+    } else return (<img src=""/>)
+  }
+
   return (
     <>
       <div className="post">
@@ -12,7 +30,7 @@ const Post = () => {
           </div>
           <div className="post__profile">
             <h4>Egbin Power PLC</h4>
-            <div>19850 followers</div>
+            <div>{followers()} followers</div>
             <div className="post__profile--time">
               5h<span style={{ color: "#666666" }}>•</span>
               <svg
@@ -43,11 +61,10 @@ const Post = () => {
           </button>
         </div>
         <div className="post__text post--pad">
-          "We are proud to be part of this great nation. Happy Democracy Day from all of us at Egbin
-          Power Plc
+          {post.text_content}
         </div>
         <div className="post__content">
-          <img src={Egbin} alt="Egbin Power PLC" />
+          <Img_video />
         </div>
         <div className="post--pad post__comment-follow">
           <div>John Doe</div>
