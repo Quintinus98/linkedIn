@@ -8,6 +8,7 @@
 }
 
 .navbar {
+  padding: 0 1.5em;
   background-color: #ffffff;
   position: fixed;
   width: 100%;
@@ -28,7 +29,7 @@
 }
 
 .navbar .first div.nosubmit {
-  width: 400px
+  width: 400px;
 }
 
 .navbar .first input {
@@ -78,6 +79,10 @@ ul.second li button {
   color: #0009;
 }
 
+.nav_link.search {
+  display: none;
+}
+
 .nav_link span {
   color: rgb(102, 102, 102);
   white-space: nowrap;
@@ -99,6 +104,10 @@ ul.second li button {
 
 .nav_link.active::after{
   transform: scaleX(1);
+}
+
+ul.second li {
+  position: relative;
 }
 
 .nav_link::after {
@@ -155,13 +164,84 @@ div.getHired .navlink__getHired {
   display: flex;
 }
 
-ul.second li {
-  position: relative;
+@media screen and (max-width: 1174px) {
+  .navbar .first div.nosubmit {
+  width: 361px
+  }
+  .navbar .first input:focus {
+    width: 361px;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  .nosubmit {
+    display: none;
+  }
 
-@media screen and (max-width: 500px) {
+  .nav_link.search {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .nav_link span {
+    display: none;
+  }
+
+  .nav_link {
+    min-width: 48px;
+    margin: 0 .76rem;
+  }
+
+  ul.second li button {
+    min-width: 48px;
+    margin: 0 .76rem;
+  }
+
+  .nav_link::after {
+    width: 0%;
+  }
+}
+
+@media screen and (max-width: 747px) {
+  .nav_link {
+    min-width: 48px;
+    margin: 0 .16rem;
+  }
+
+  ul.second li button {
+    min-width: 48px;
+    margin: 0 .16rem;
+  }
+
+  .li-business {
+    padding-left: 0.16rem !important;
+  }
+}
+
+@media screen and (max-width: 613px) {
   div.getHired {
-    width: 70px;
+    width: 80px;
+  }
+  .nav_link {
+    min-height: 100%;
+  }
+
+  ul.second li button {
+    min-height: 100%;
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .header {
+    margin-bottom: 75px;
+  }
+  div.getHired {
+    width: 60px;
   }
 }
