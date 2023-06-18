@@ -8,13 +8,14 @@ function Home() {
     "Consolidating and making reusable various react UI components from two user interfaces. Working and planning with a team to build open source projects";
 
   const post = {
-      id: "34567898765",
-      profile_name: "Egbin Power PLC",
-      title: "Happy Democracy Day",
-      text_content: "We are proud to be part of this great nation. Happy Democracy Day from all of us at Egbin Power Plc, Consolidating and making reusable various react UI components from two user interfaces. Working and planning with a team to build open source projects",
-      image: profile,
-      video: girls_dancing
-  }
+    id: "34567898765",
+    profile_name: "Egbin Power PLC",
+    title: "Happy Democracy Day",
+    text_content:
+      "We are proud to be part of this great nation. Happy Democracy Day from all of us at Egbin Power Plc, Consolidating and making reusable various react UI components from two user interfaces. Working and planning with a team to build open source projects",
+    image: profile,
+    video: girls_dancing,
+  };
 
   return (
     <div className="app">
@@ -25,7 +26,14 @@ function Home() {
         ipsum dolor sit amet consectetur
       </div>
 
-      <Post id={post.id} profile_name={post.profile_name} title={post.title} text_content={post.text_content} image={post.image} video={post.video} />
+      <Post
+        id={post.id}
+        profile_name={post.profile_name}
+        title={post.title}
+        text_content={post.text_content}
+        image={post.image}
+        video={post.video}
+      />
 
       <div className="container">
         <WorkExperience

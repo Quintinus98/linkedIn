@@ -23,6 +23,48 @@
   margin-bottom: 20px;
 }
 
+.post__text {
+  position: relative;
+}
+
+.post__text .post__trunc {
+  overflow: hidden;
+  line-height: 1.5em;
+  max-height: 3.0em;
+  word-wrap: break-word;
+  display: relative;
+}
+
+.post__text .btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.post__text button {
+  border: none;
+  outline: none;
+  background: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding-left: 4px;
+  font-size: inherit;
+  color: var(--svg-content);
+  font-weight: 450;
+}
+
+.post__full-text {
+  max-height: none;
+}
+
+.post__text--no-button {
+  display: none;
+}
+
+.post__text button:hover {
+  color: var(--linkedin-blue);
+}
+
 .post__content img {
   max-width: 100%;
   max-height: 100%;
@@ -36,7 +78,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background: rgba(102, 102, 102, 0.17); */
   background: rgb(17, 16, 17);
 }
 

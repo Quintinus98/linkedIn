@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { profile } from "../../assets";
 import "./styles.css";
 
@@ -9,17 +9,17 @@ const followers = () => {
   return random;
 };
 
-const Post = (
-  post
-: postType) => {
+const Post = (post: postType) => {
+  const [btnClick, setbtnClick] = React.useState(false);
+  const clickedBtn = () => setbtnClick(true);
 
   const Img_video = () => {
     if (post.image) {
-      return (<img src={post.image} alt="Egbin Power PLC" />)
+      return <img src={post.image} alt="Egbin Power PLC" />;
     } else if (post.video) {
-      return (<video src={post.video} controls></video>)
-    } else return (<img src=""/>)
-  }
+      return <video src={post.video} controls></video>;
+    } else return <img src="" />;
+  };
 
   return (
     <>
@@ -61,7 +61,10 @@ const Post = (
           </button>
         </div>
         <div className="post__text post--pad">
-          {post.text_content}
+          <div className={!btnClick ? "post__trunc" : "post__full-text"}>{post.text_content}</div>
+          <div className={!btnClick ? "btn-container" : "post__text--no-button"}>
+            <button onClick={clickedBtn}>...see more</button>
+          </div>
         </div>
         <div className="post__content">
           <Img_video />
