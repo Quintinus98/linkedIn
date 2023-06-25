@@ -3,7 +3,7 @@ import "./style.css";
 const Seperator = () => {
   return (
     <>
-      <hr />
+      <hr className="seperate" />
     </>
   );
 };

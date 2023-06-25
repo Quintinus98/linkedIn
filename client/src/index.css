@@ -7,6 +7,11 @@
 
   color-scheme: light dark;
 
+  --light-color: rgb(238, 243, 249);
+  --light-gray: rgb(235, 235, 235);
+  --svg-content: rgb(102, 102, 102);
+  --linkedin-blue: rgb(10, 102, 194);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,4 +34,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+hr {
+  border-top: 0.01em solid #ebebeb;
 }

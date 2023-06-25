@@ -1,28 +1,23 @@
 .header {
   width: 100%;
-  background-color: #ffffff;
   border-bottom: 1px solid rgb(235, 235, 235);
   overflow: hidden;
   z-index: 100;
-  position: fixed;
+  position: relative;
+  margin-bottom: 70px;
 }
 
 .navbar {
- max-width: 100vw;
-  margin: 0 11rem;
+  padding: 0 1.5em;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   font-size: 12px;
-  /*position: fixed;*/
-  /*background-color: aquamarine;*/
-}
-
-nav.sticky {
-  /*position: sticky;*/
-  top: 0;
-  z-index: 100;
 }
 
 .navbar .first {
@@ -34,7 +29,7 @@ nav.sticky {
 }
 
 .navbar .first div.nosubmit {
-  width: 400px
+  width: 400px;
 }
 
 .navbar .first input {
@@ -46,7 +41,7 @@ nav.sticky {
   height: 34px;
   border-radius: 4px;
   padding: 0 .8rem 0 40px;
-  background: rgb(238, 243, 249) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
+  background: rgb(238, 243, 249) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(102, 102, 102)' class='mercado-match' viewBox='0 0 24 24'%3E%3Cpath d='M21.41 18.59l-5.27-5.28A6.83 6.83 0 0017 10a7 7 0 10-7 7 6.83 6.83 0 003.31-.86l5.28 5.27a2 2 0 002.82-2.82zM5 10a5 5 0 115 5 5 5 0 01-5-5z'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
   width: 280px;
   transition: width .4s linear;
   outline: none;
@@ -84,13 +79,17 @@ ul.second li button {
   color: #0009;
 }
 
+.nav_link.search {
+  display: none;
+}
+
 .nav_link span {
   color: rgb(102, 102, 102);
   white-space: nowrap;
 }
 
 .nav_link svg {
-  fill: rgb(102, 102, 102);
+  fill: #666666;
 }
 
 .nav_link:hover svg,
@@ -105,6 +104,10 @@ ul.second li button {
 
 .nav_link.active::after{
   transform: scaleX(1);
+}
+
+ul.second li {
+  position: relative;
 }
 
 .nav_link::after {
@@ -124,8 +127,14 @@ ul.second div {
   align-items: center;
 }
 
-li .profile img {
+li button .profile img {
   border-radius: 50%;
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+}
+
+li button:active .profile img {
+  transform: scale(0.9);
 }
 
 li i {
@@ -155,13 +164,84 @@ div.getHired .navlink__getHired {
   display: flex;
 }
 
-ul.second li {
-  position: relative;
+@media screen and (max-width: 1174px) {
+  .navbar .first div.nosubmit {
+  width: 361px
+  }
+  .navbar .first input:focus {
+    width: 361px;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  .nosubmit {
+    display: none;
+  }
 
-@media screen and (max-width: 500px) {
+  .nav_link.search {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .nav_link span {
+    display: none;
+  }
+
+  .nav_link {
+    min-width: 48px;
+    margin: 0 .76rem;
+  }
+
+  ul.second li button {
+    min-width: 48px;
+    margin: 0 .76rem;
+  }
+
+  .nav_link::after {
+    width: 0%;
+  }
+}
+
+@media screen and (max-width: 747px) {
+  .nav_link {
+    min-width: 48px;
+    margin: 0 .16rem;
+  }
+
+  ul.second li button {
+    min-width: 48px;
+    margin: 0 .16rem;
+  }
+
+  .li-business {
+    padding-left: 0.16rem !important;
+  }
+}
+
+@media screen and (max-width: 613px) {
   div.getHired {
-    width: 70px;
+    width: 80px;
+  }
+  .nav_link {
+    min-height: 100%;
+  }
+
+  ul.second li button {
+    min-height: 100%;
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .header {
+    margin-bottom: 75px;
+  }
+  div.getHired {
+    width: 60px;
   }
 }

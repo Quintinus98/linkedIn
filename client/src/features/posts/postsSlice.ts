@@ -1,12 +1,14 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface postState {
-  entities: string[];
+export interface postState {
+  entities: {
+    [key: string]: any;
+  };
   status: string;
 }
 
 const initialState: postState = {
-  entities: [],
+  entities: {},
   status: "",
 };
 
@@ -14,9 +16,10 @@ const postsSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {
-    postAdded(state, action: PayloadAction<string>) {
+    postAdded(state, action: PayloadAction<any>) {
+      const post = action.payload;
       // ✅ This "mutating" code is okay inside of createSlice!
-      state.entities.push(action.payload);
+      state.entities[post.id] = post;
     },
     postToggled(state, action) {
       // const post = state.entities.find(post => post.id === action.payload)
