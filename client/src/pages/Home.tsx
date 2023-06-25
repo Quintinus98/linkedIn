@@ -2,6 +2,7 @@ import WorkExperience from "../components/workExperience";
 import Seperator from "../components/seperator";
 import Post from "../components/post";
 import { profile, girls_dancing } from "../assets";
+import FeedIdModule from "../components/feedIdModule";
 
 function Home() {
   const description =
@@ -34,6 +35,8 @@ function Home() {
         image={post.image}
         video={post.video}
       />
+
+      <FeedIdModule />
 
       <div className="container">
         <WorkExperience

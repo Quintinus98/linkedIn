@@ -4,9 +4,15 @@ import "./styles.css";
 
 import { postType } from "../../features/posts/PostsList";
 
-const followers = () => {
-  const random = Math.floor(Math.random() * 10000);
-  return random;
+export const randomNum = (val?: number) => {
+  const val2: number = 10000;
+  if (val) {
+    const random = Math.floor(Math.random() * val);
+    return random;
+  } else {
+    const random = Math.floor(Math.random() * val2);
+    return random;
+  }
 };
 
 const Post = (post: postType) => {
@@ -30,7 +36,7 @@ const Post = (post: postType) => {
           </div>
           <div className="post__profile">
             <h4>Egbin Power PLC</h4>
-            <div>{followers()} followers</div>
+            <div>{randomNum()} followers</div>
             <div className="post__profile--time">
               5h<span style={{ color: "#666666" }}>•</span>
               <svg

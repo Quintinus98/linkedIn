@@ -1,0 +1,56 @@
+.feed__module--container {
+  background-color: #ffffff;
+  border: 1px solid #E0DFDC;
+  border-radius: 6px;
+  padding-bottom: 1.2rem;
+  max-width: 225px;
+  margin-bottom: 0.5rem;
+}
+
+.feed__module--bg-image {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.feed__module--break-words {
+  margin: 0 12px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feed__module--linkID {
+  text-decoration: none;
+}
+.feed__module--break-words:hover {
+  cursor: pointer;
+}
+.feed__module--break-words:hover .feed__module--name{
+  text-decoration: underline;
+}
+
+.feed__module--member-photo {
+margin: -38px auto 12px;
+border: 2px solid #ffffff;
+background-color: transparent;
+background-clip: content-box;
+width: 72px;
+height: 72px;
+border-radius: 50%;
+}
+
+.feed__module--name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.feed__module--short-description {
+  margin-top: .4rem;
+  text-align: center;
+  font-size: 12px;
+  color: var(--svg-content);
+}
