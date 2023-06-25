@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import { profile } from "../../assets";
 import "./styles.css";
-import { randomNum } from "../post";
 
 const FeedIdModule = () => {
   return (
@@ -23,23 +22,7 @@ const FeedIdModule = () => {
           </div>
         </div>
         <hr />
-        <div>
-          <div>
-            Who's viewed your profile <span>{randomNum(100)}</span>
-          </div>
-          <div>
-            Impressions of your post <span>{randomNum(999)}</span>
-          </div>
-        </div>
-        <hr />
-        <div>
-        Access exclusive tools & insights
-        Get Hired Faster, Try Premium Free
-        </div>
-        <hr />
-        <div>
-        My items
-        </div>
+        
       </div>
     </div>
   );
