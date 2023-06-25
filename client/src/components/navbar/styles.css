@@ -84,12 +84,12 @@ ul.second li button {
 }
 
 .nav_link span {
-  color: rgb(102, 102, 102);
+  color: var(--svg-content);
   white-space: nowrap;
 }
 
 .nav_link svg {
-  fill: #666666;
+  fill: var(--svg-content);
 }
 
 .nav_link:hover svg,
