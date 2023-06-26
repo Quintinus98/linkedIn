@@ -18,10 +18,10 @@ const FeedIdModule = () => {
               <div className="feed__module--name">John Doe</div>
             </div>
           </Link>
+        </div>
           <div className="feed__module--short-description">
             Power Engineer | Fullstack Developer
           </div>
-        </div>
         <hr />
         <div className="feed__module--view__impressions">
           Who's viewed your profile{" "}
@@ -54,11 +54,12 @@ const FeedIdModule = () => {
                 d="M4 4a3.36 3.36 0 00-1 2.38v11.24A3.38 3.38 0 006.38 21h11.24A3.36 3.36 0 0020 20z"
                 fill="#e7a33e"></path>
             </svg>
-            <span>Try Premium Free</span>
+            <span>Try Premium for free</span>
           </div>
         </div>
         <hr className="hr__null" />
-        <div className="feed__module--insights">
+        <div className="feed__module--items">
+          <i className="fa-solid fa-bookmark"></i>
           <span>My items</span>
         </div>
       </div>

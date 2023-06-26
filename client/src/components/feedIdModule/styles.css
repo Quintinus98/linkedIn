@@ -48,6 +48,7 @@ border-radius: 50%;
 }
 
 .feed__module--short-description {
+  padding: 0 12px;
   margin-top: .4rem;
   text-align: center;
   font-size: 12px;
@@ -71,21 +72,36 @@ border-radius: 50%;
   cursor: pointer;
 }
 
-.feed__module--insights {
+.feed__module--items {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.feed__module--items i {
+  color: var(--svg-content);
+}
+
+.feed__module--insights,
+.feed__module--items {
   padding: 12px;
   font-size: 12px;
 }
+
 .feed__module--insights span {
   color: var(--svg-content);
   font-weight: 500;
   display: block;
 }
-.feed__module--insights:hover {
+.feed__module--insights:hover,
+.feed__module--items:hover {
   background: var(--light-gray);
 }
 
 .feed__module--premium {
   display: flex;
+  gap: 4px;
 }
 
 .feed__module--premium span {
