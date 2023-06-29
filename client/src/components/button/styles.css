@@ -1,0 +1,36 @@
+.button__general {
+  border: 1px solid var(--svg-content);
+  outline: none;
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  min-height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: 167ms;
+  transition-property: background-color;
+}
+
+.button__general div {
+  color: var(--svg-content);
+}
+
+.button__general i,
+.button__general svg {
+  color: var(--svg-content);
+  fill: var(--svg-content);
+  margin-right: 4px;
+}
+
+.button__general:hover {
+  border: 2px solid var(--svg-content);
+  padding: calc(0.6rem - 1px) calc(1.2rem - 1px);
+  background-color: var(--light-gray);
+}

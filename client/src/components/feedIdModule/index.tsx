@@ -19,9 +19,7 @@ const FeedIdModule = () => {
             </div>
           </Link>
         </div>
-          <div className="feed__module--short-description">
-            Power Engineer | Fullstack Developer
-          </div>
+        <div className="feed__module--short-description">Power Engineer | Fullstack Developer</div>
         <hr />
         <div className="feed__module--view__impressions">
           Who's viewed your profile{" "}

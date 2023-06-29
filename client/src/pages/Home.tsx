@@ -3,6 +3,8 @@ import Seperator from "../components/seperator";
 import Post from "../components/post";
 import { profile, girls_dancing } from "../assets";
 import FeedIdModule from "../components/feedIdModule";
+import AddFeed from "../components/addFeed";
+import Button from "../components/button";
 
 function Home() {
   const description =
@@ -27,6 +29,8 @@ function Home() {
         ipsum dolor sit amet consectetur
       </div>
 
+      <AddFeed />
+      
       <Post
         id={post.id}
         profile_name={post.profile_name}
